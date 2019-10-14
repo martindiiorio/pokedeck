@@ -1,10 +1,10 @@
 // base
-@import './base/reset.scss';
-@import './base/variables.scss';
-@import './base/mixins.scss';
+@import './styles/base/Reset.scss';
+@import './styles/base/Variables.scss';
+@import './styles/base/Mixins.scss';
 
-// layouts
-@import './layout/Header.scss';
+// Scss layouts
+@import './styles/scss/Header.scss';
 
 body {
   background-color: $color--gray-lite;
