@@ -1,7 +1,9 @@
+// base
 @import './base/reset.scss';
 @import './base/variables.scss';
 @import './base/mixins.scss';
 
+// layouts
 @import './layout/Header.scss';
 
 body {
