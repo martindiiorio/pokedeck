@@ -1,0 +1,26 @@
+/* VARIABLES */
+
+// colors
+$color--white: #fff;
+$color--gray-lite: #f4f3f3;
+$color--gray-darkest: #2f343d;
+$color--black: #000;
+
+// margins
+$spacing-base: 8px;
+
+$spacing-1x: $spacing-base * 1; // 8
+$spacing-2x: $spacing-base * 2; // 16
+$spacing-3x: $spacing-base * 3; // 24
+$spacing-4x: $spacing-base * 4; // 32
+$spacing-5x: $spacing-base * 5; // 40
+$spacing-6x: $spacing-base * 6; // 48
+$spacing-7x: $spacing-base * 7; // 56
+$spacing-8x: $spacing-base * 8; // 64
+$spacing-9x: $spacing-base * 9; // 72
+$spacing-10x: $spacing-base * 10; // 80
+
+// breakpoints
+$screen-sm: 320px;
+$screen-md: 768px;
+$screen-lg: 1024px;

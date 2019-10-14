@@ -1,11 +1,12 @@
-import React from 'react';
-import './App.css';
+import React, { Fragment } from 'react';
+import Header from './components/Header/Header';
+import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Starting Pokedeck</h1>
-    </div>
+    <Fragment>
+      <Header />
+    </ Fragment>
   );
 }
 
