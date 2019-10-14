@@ -1,68 +1,69 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Pokemon test
 
-In the project directory, you can run:
+Hello. This is the Immfly frontend code test. You have to build a web application listing the **first pokemon generation**.
 
-### `yarn start`
+## Features to implement
+### Build and style the main list
+You have to implement the main list like in this image:
+<img align="center" src="https://imgur.com/HNu1wmq.png" style="border: 1px solid black" />
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Notice that:
+*  The url is **/pokemon**.
+*  When user hovers a pokemon, its background becomes gray.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `yarn test`
+### Pokemon detail page
+Add the possibility to click on a pokemon and go to the detail page, like in this image:
+<img align="center" src="https://imgur.com/1Mbh6mK.png" style="border: 1px solid black" />
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Notice that the pokemon detail url is different. It is ``/pokemon/:name``. In the **charizard** example is ``/pokemon/charizard``.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Images
+The images url is ``http://pokestadium.com/sprites/xy/{name}.gif``
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+For example:
+* **Charizard** <img align="center" src="http://pokestadium.com/sprites/xy/charizard.gif"/>
+* **Bulbasaur** <img align="center" src="http://pokestadium.com/sprites/xy/bulbasaur.gif" />
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+*You will realize that there are two pokemon which image is not loaded properly. Put in practice your skills to solve it.*
 
-### `yarn eject`
+### Api Endpoints
+The api base url is ``https://pokeapi.co/api/v2``.
+* **List**: ``/pokemon`` (maybe you have to add the limit parameter on the request to fetch the first generation in only one request).
+* **Detail**: ``/pokemon/:name``.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+For example:
+* **Charizard**: ``https://pokeapi.co/api/v2/pokemon/charizard`` 
+* **Bulbasaur**: ``https://pokeapi.co/api/v2/pokemon/bulbasaur`` 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Demo
+You can watch/download the video showing how the app finally should work: <a href="https://mega.nz/#!2JNVlIzb!kmmubCQEUQV0RgZ9dExTC64P_9eDNBPE8zgNNS-b0do" target="_blank">demo</a>.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 🧐 We want to see 🧐
+- React knowledge
+- Project architecture
+- Css skills
+- ECMAScript6 skills
+- Clean code
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## ✅ You should ✅
+- Use the **axios** package for http requests.
+- **Prevent unknown urls** while redirecting to the list page.
+- Style with **responsiveness**. As the video shows, the pokemon list should adapt to the screen size and show three pokemons per row on large width screen size, two pokemon per row on medium width screen size and one pokemon per row on mobile width sizes. (You have a file named mixins.scss, in which you can use the existing medias in order to configure the responsiveness).
 
-## Learn More
+## 🚫 You should not 🚫
+- Use bootstrap.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🌟 Bonus 🌟
+- Use **redux**.
+- Add **tests**.
+- Use **prop types**.
+- Show a **loading indicator** while an api request is in process.
+- Follow a **linter**.
+- **Dockerize**
+- Dockerize **hotreload** mode
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+⚠⚠⚠ **Once you finish the test, throw a Pull Request to the master branch on this repository.** ⚠⚠⚠
