@@ -28,7 +28,15 @@ export default class PokemonCard extends Component {
             <img src={this.state.imageUrl} alt={this.state.name + 'image'} />
           </div>
           <div className="card-body">
-            <h1>{this.state.name}</h1>
+            <h1>
+              {this.state.name
+                .toLowerCase()
+                .split(' ')
+                .map(
+                  letter => letter.charAt(0).toUpperCase() + letter.substring(1)
+                )
+                .join(' ')}
+            </h1>
           </div>
         </div>
       </div>
