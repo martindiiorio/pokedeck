@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import immflyLogo from './../../assets/immfly.png';
 import pokemonLogo from './../../assets/pokemon.png';
 
