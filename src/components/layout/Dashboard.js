@@ -1,12 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PokemonList from './../pokemon/PokemonList';
 
-export default class Dashboard extends Component {
-  render() {
-    return (
-      <div>
-        <PokemonList /> 
-      </div>
-    )
-  }
-}
+const Dashboard = () => <PokemonList />;
+
+export default Dashboard;

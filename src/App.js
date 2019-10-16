@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 
 import './App.scss';
 import Header from './components/layout/Header';
@@ -9,9 +9,10 @@ import PokemonDetails from './components/pokemon/PokemonDetails';
 function App() {
   return (
     <Router>
+      <Redirect exact from="/" to="/pokemon/" />
       <Header />
       <Switch>
-        <Route exact path="/" component={Dashboard} />
+        <Route exact path="/pokemon/" component={Dashboard} />
         <Route exact path="/pokemon/:pokemonIndex" component={PokemonDetails} />
       </Switch>
     </ Router>
