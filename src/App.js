@@ -1,14 +1,20 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+
+import './App.scss';
 import Header from './components/layout/Header';
 import Dashboard from './components/layout/Dashboard';
-import './App.scss';
+import PokemonDetails from './components/pokemon/PokemonDetails';
 
 function App() {
   return (
-    <Fragment>
+    <Router>
       <Header />
-      <Dashboard />
-    </ Fragment>
+      <Switch>
+        <Route exact path="/" component={Dashboard} />
+        <Route exact path="/pokemon/:pokemonIndex" component={PokemonDetails} />
+      </Switch>
+    </ Router>
   );
 }
 
