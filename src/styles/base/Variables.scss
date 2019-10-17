@@ -21,6 +21,7 @@ $spacing-9x: $spacing-base * 9; // 72
 $spacing-10x: $spacing-base * 10; // 80
 
 // breakpoints
-$screen-sm: 320px;
-$screen-md: 768px;
-$screen-lg: 1024px;
+$mobile-max: 767px;
+$tablet-min: 768px;
+$tablet-max: 1023px;
+$desktop-min: 1024px;

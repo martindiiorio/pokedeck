@@ -5,7 +5,6 @@ import spinner from './../../assets/spinner.gif'
 export default class PokemonSprite extends Component {
   state = {
     name: this.props.name,
-    imageUrl: this.props.name,
     isLoading: true
   }
 
@@ -24,9 +23,10 @@ export default class PokemonSprite extends Component {
     return (
       <Fragment>
         {this.state.isLoading ? (
-            <img src={spinner} alt="Loading" />
+            <img className="spinner" src={spinner} alt="Loading" />
           ) : (
-            <img 
+            <img
+              className="pokemon" 
               src={this.state.imageUrl} 
               alt={this.state.name + 'image'} 
               onError={(e)=>{e.target.src=placeholder}}

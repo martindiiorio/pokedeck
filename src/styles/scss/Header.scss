@@ -1,28 +1,33 @@
-.container {
+.immflyLogo,
+  .pokemonLogo {
+  @include grid-child(4, 12, 12);
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 .immflyLogo {
-  max-width: 7%;
-  height: auto;
-  margin-top: $spacing-3x;
-  
-  @media (min-width: $screen-md) {
-    max-width: 3.5%;
-    margin-top: $spacing-6x;
-  }  
+  img {
+    margin-top: $spacing-3x;
+    margin-bottom: $spacing-1x;
+    max-width: 30px;
+    height: auto;
+    
+    @media (min-width: $tablet-min) {
+      margin-top: $spacing-6x;
+      max-width: 50px;
+    }
+  } 
 }
 
 .pokemonLogo {
-  max-width: 60%;
-  height: auto;
-  margin: $spacing-2x 0 $spacing-2x;
-  
-  @media (min-width: $screen-md) {
-    // margin: $spacing-6x 0 $spacing-3x;
-    max-width: 30%;
+  img {
+    margin-bottom: $spacing-4x;
+    max-width: 60%;
+    height: auto;
+    
+    @media (min-width: $tablet-min) {
+      margin-bottom: $spacing-8x;
+      max-width: 40%;
+    }
   }  
 }

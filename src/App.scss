@@ -1,10 +1,12 @@
 // base
-@import './styles/base/Reset.scss';
-@import './styles/base/Variables.scss';
-@import './styles/base/Mixins.scss';
+@import './styles/base/reset.scss';
+@import './styles/base/variables.scss';
+@import './styles/base/grid.scss';
 
 // Scss layouts
-@import './styles/scss/Header.scss';
+@import './styles/scss/header.scss';
+@import './styles/scss/spinner.scss';
+@import './styles/scss/pokemon.scss';
 
 body {
   background-color: $color--gray-lite;
