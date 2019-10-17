@@ -22,7 +22,7 @@ export default class PokemonCard extends Component {
 
     return (
       <div className="container">
-        <Link to={`/pokemon/${this.state.pokemonIndex}`}>
+        <Link to={`/pokemon/${this.state.pokemonIndex}/`}>
           <div className="card">
             <div className="card-header">
               <PokemonSprite
