@@ -1,8 +1,7 @@
 .pokemon-details {
   position: fixed;
   width: 400px;
-  max-width: 80%;
-  height: 50%;
+  max-width: 80%;;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -34,7 +33,7 @@
   
   &-body {
     color: $color--gray-middle;
-    padding: 0 $spacing-3x;
+    padding: 0 $spacing-3x $spacing-3x;
     font-weight: 700;
     line-height: 28px;
 
