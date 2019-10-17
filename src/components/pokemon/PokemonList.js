@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import axios from 'axios';
 
+import Header from './../layout/Header';
 import PokemonCard from './PokemonCard';
 
 export default class PokemonList extends Component {
@@ -18,6 +19,7 @@ export default class PokemonList extends Component {
   render() {
     return (
       <Fragment>
+        <Header />
         {this.state.pokemon || !this.state.isLoading ? (
           <div>
             {this.state.pokemon.map(pokemon => (
