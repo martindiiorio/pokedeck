@@ -1,5 +1,7 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom'
+import { ReactComponent as Close } from './../../assets/close.svg'
 
 export default class PokemonDetails extends Component {
   state = {
@@ -41,14 +43,21 @@ export default class PokemonDetails extends Component {
     const { pokemonImg, pokemonIndex, name, types, height, abilities } = this.state;
 
     return (
-      <Fragment>
-        <img src={pokemonImg} alt={name} />
-        <h1>{name.charAt(0).toUpperCase() + name.slice(1)}</h1>
-        <h1>ID: {pokemonIndex}</h1>
-        <h1>Type: {types}</h1>
-        <h1>Height: {height}</h1>
-        Abilities: <ul>{abilities}</ul>
-      </Fragment>
+      <div className="pokemon-details">
+        <div className="pokemon-details-header">
+        <Link className="close" to="/pokemon">
+          <Close />
+        </Link>
+          <img src={pokemonImg} alt={name} />
+          <h1>{name.charAt(0).toUpperCase() + name.slice(1)}</h1>
+        </div>
+        <div className="pokemon-details-body">
+          <h1>ID: {pokemonIndex}</h1>
+          <h1>Type: {types}</h1>
+          <h1>Height: {height}</h1>
+          Abilities: <ul>{abilities}</ul>
+        </div>
+      </div>
     )
   }
 }
