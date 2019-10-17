@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom'
 import { ReactComponent as Close } from './../../assets/close.svg'
+import placeholder from './../../assets/placeholder.png'
 
 export default class PokemonDetails extends Component {
   state = {
@@ -48,7 +49,7 @@ export default class PokemonDetails extends Component {
         <Link className="close" to="/pokemon">
           <Close />
         </Link>
-          <img src={pokemonImg} alt={name} />
+          <img src={pokemonImg} alt={name} onError={(e)=>{e.target.src=placeholder}} />
           <h1>{name.charAt(0).toUpperCase() + name.slice(1)}</h1>
         </div>
         <div className="pokemon-details-body">
