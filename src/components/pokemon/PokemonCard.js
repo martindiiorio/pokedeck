@@ -22,14 +22,14 @@ export default class PokemonCard extends Component {
 
     return (
       <Fragment>
-          <div className="pokemon">
+        <Link className="pokemon" to={`/pokemon/${this.state.pokemonIndex}/`}>
+          <div className="pokemon-container">
             <div className="pokemon-header">
               <PokemonSprite
                 name={this.props.name}
               />
             </div>
             <div className="pokemon-body">
-              <Link to={`/pokemon/${this.state.pokemonIndex}/`}>
                 <h1>
                   {this.state.name
                     .toLowerCase()
@@ -39,9 +39,9 @@ export default class PokemonCard extends Component {
                     )
                     .join(' ')}
                 </h1>
-              </Link>
             </div>
           </div>
+        </Link>
       </Fragment>
     )
   }

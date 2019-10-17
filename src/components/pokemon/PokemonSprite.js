@@ -26,7 +26,6 @@ export default class PokemonSprite extends Component {
             <img className="spinner" src={spinner} alt="Loading" />
           ) : (
             <img
-              className="pokemon" 
               src={this.state.imageUrl} 
               alt={this.state.name + 'image'} 
               onError={(e)=>{e.target.src=placeholder}}
