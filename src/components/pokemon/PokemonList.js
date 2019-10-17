@@ -2,12 +2,12 @@ import React, { Component, Fragment } from 'react';
 import axios from 'axios';
 
 import PokemonCard from './PokemonCard';
-import spinner from './../../assets/spinner.gif'
 
 export default class PokemonList extends Component {
   state = {
     url: 'https://pokeapi.co/api/v2/pokemon/?offset=0&limit=151',
-    pokemon: null
+    pokemon: null,
+    isLoading: true
   }
 
   async componentDidMount() {
@@ -18,7 +18,7 @@ export default class PokemonList extends Component {
   render() {
     return (
       <Fragment>
-        {this.state.pokemon ? (
+        {this.state.pokemon || !this.state.isLoading ? (
           <div>
             {this.state.pokemon.map(pokemon => (
               <PokemonCard  
@@ -29,7 +29,7 @@ export default class PokemonList extends Component {
             ))}
           </div>
         ) : (
-          <img src={spinner} alt="Loading"/>
+          null
         )}
       </Fragment> 
     )
