@@ -27,7 +27,7 @@ export default class PokemonDetails extends Component {
     const name = pokemonRes.data.name,
           id = pokemonRes.data.id,
           pokemonImg = `http://pokestadium.com/sprites/xy/${name}.gif`,
-          types = pokemonRes.data.types.map(types => types.type.name),
+          types = pokemonRes.data.types.map(types => types.type.name).join(' - '),
           height = pokemonRes.data.height * 10 + 'cm',
           abilities = pokemonRes.data.abilities
       .map(abilities => {
