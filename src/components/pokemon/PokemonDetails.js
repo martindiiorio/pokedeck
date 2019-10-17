@@ -25,6 +25,7 @@ export default class PokemonDetails extends Component {
     
     // Store values details 
     const name = pokemonRes.data.name,
+          id = pokemonRes.data.id,
           pokemonImg = `http://pokestadium.com/sprites/xy/${name}.gif`,
           types = pokemonRes.data.types.map(types => types.type.name),
           height = pokemonRes.data.height * 10 + 'cm',
@@ -37,12 +38,12 @@ export default class PokemonDetails extends Component {
         )
       });
 
-    this.setState({ pokemonImg, pokemonIndex, name, types, height, abilities })  
+    this.setState({ pokemonImg, id, name, types, height, abilities })  
   }
 
   render() {
-    const { pokemonImg, pokemonIndex, name, types, height, abilities } = this.state;
-
+    const { pokemonImg, id, name, types, height, abilities } = this.state;
+    console.log(this.state)
     return (
       <div className="pokemon-details">
         <div className="pokemon-details-header">
@@ -53,7 +54,7 @@ export default class PokemonDetails extends Component {
           <h1>{name.charAt(0).toUpperCase() + name.slice(1)}</h1>
         </div>
         <div className="pokemon-details-body">
-          <h1>ID: {pokemonIndex}</h1>
+          <h1>ID: {id}</h1>
           <h1>Type: {types}</h1>
           <h1>Height: {height}</h1>
           Abilities: <ul>{abilities}</ul>
