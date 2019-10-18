@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import placeholder from './../../assets/placeholder.png'
-import spinner from './../../assets/spinner.gif'
+import placeholder from './../../assets/placeholder.png';
+import spinner from './../../assets/spinner.gif';
 
 export default class PokemonSprite extends Component {
   state = {
@@ -11,12 +11,11 @@ export default class PokemonSprite extends Component {
   componentDidMount() {
     const { name } = this.props;
     const imageUrl = `http://pokestadium.com/sprites/xy/${name}.gif`;
-    setInterval(() => this.setState({ isLoading: false }), 500);
-
-    this.setState({
-      name,
-      imageUrl
-    }) 
+    setInterval(() => this.setState({ 
+      name, 
+      imageUrl,
+      isLoading: false
+    }), 500);
   } 
  
   render() {

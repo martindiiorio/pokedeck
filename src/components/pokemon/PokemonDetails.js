@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { Link } from 'react-router-dom'
-import { ReactComponent as Close } from './../../assets/close.svg'
-import placeholder from './../../assets/placeholder.png'
+
+import { ReactComponent as Close } from './../../assets/close.svg';
+import placeholder from './../../assets/placeholder.png';
 
 export default class PokemonDetails extends Component {
   state = {
@@ -30,16 +31,17 @@ export default class PokemonDetails extends Component {
           types = pokemonRes.data.types.map(types => types.type.name).join(' - '),
           height = pokemonRes.data.height * 10 + 'cm',
           abilities = pokemonRes.data.abilities
-      .map(abilities => {
-        return (
-          <li key={abilities.ability.name}>
-            {abilities.ability.name.charAt(0).toUpperCase() + abilities.ability.name.slice(1)}
-          </li>
-        )
-      });
+            .map(abilities => {
+              return (
+                <li key={abilities.ability.name}>
+                  {abilities.ability.name.charAt(0).toUpperCase() + abilities.ability.name.slice(1)}
+                </li>
+              )
+            });
 
-    this.setState({ pokemonImg, id, name, types, height, abilities })  
+    this.setState({ pokemonImg, id, name, types, height, abilities });
   }
+
   // Adding placeholder image for those pokemon images that returns 404 
   onError = (e) =>{ e.target.src = placeholder }
 
@@ -49,9 +51,9 @@ export default class PokemonDetails extends Component {
     return (
       <div className="pokemon-details">
         <div className="pokemon-details-header">
-        <Link className="close" to="/pokemon">
-          <Close />
-        </Link>
+          <Link className="close" to="/pokemon">
+            <Close />
+          </Link>
           <img src={pokemonImg} alt={name} onError={this.onError} />
           <h1>{name.charAt(0).toUpperCase() + name.slice(1)}</h1>
         </div>
