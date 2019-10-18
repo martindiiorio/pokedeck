@@ -43,7 +43,7 @@ export default class PokemonDetails extends Component {
 
   render() {
     const { pokemonImg, id, name, types, height, abilities } = this.state;
-    console.log(this.state)
+    
     return (
       <div className="pokemon-details">
         <div className="pokemon-details-header">
