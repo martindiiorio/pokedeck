@@ -40,6 +40,8 @@ export default class PokemonDetails extends Component {
 
     this.setState({ pokemonImg, id, name, types, height, abilities })  
   }
+  // Adding placeholder image for those pokemon images that returns 404 
+  onError = (e) =>{ e.target.src = placeholder }
 
   render() {
     const { pokemonImg, id, name, types, height, abilities } = this.state;
@@ -50,7 +52,7 @@ export default class PokemonDetails extends Component {
         <Link className="close" to="/pokemon">
           <Close />
         </Link>
-          <img src={pokemonImg} alt={name} onError={(e)=>{e.target.src=placeholder}} />
+          <img src={pokemonImg} alt={name} onError={this.onError} />
           <h1>{name.charAt(0).toUpperCase() + name.slice(1)}</h1>
         </div>
         <div className="pokemon-details-body">
