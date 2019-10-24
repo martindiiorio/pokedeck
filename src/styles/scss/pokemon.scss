@@ -10,8 +10,8 @@
   align-items: center;
   flex-direction: column;
   text-decoration: none;
-  transition: all .25s ease-in-out;
-  
+  transition: all 0.25s ease-in-out;
+
   &:hover {
     background: $color--gray-lite;
     cursor: pointer;
@@ -23,13 +23,6 @@
     align-items: center;
   }
 
-  &-header {
-    img {
-      width: 50px;
-      height: auto;
-    }
-  }
-  
   &-body {
     font-family: $open-sans;
     font-size: 14px;
