@@ -5,6 +5,7 @@ import spinner from './../../assets/spinner.gif';
 export default ({ name }) => {
   const [image, setImage] = useState(null);
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const timeout = setTimeout(() => {
       setImage(`http://pokestadium.com/sprites/xy/${name}.gif`);
@@ -12,6 +13,7 @@ export default ({ name }) => {
     }, 600);
     return () => clearTimeout(timeout);
   }, [name]);
+
   return (
     <>
       {loading ? (
